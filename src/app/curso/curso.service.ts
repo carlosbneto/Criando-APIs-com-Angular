@@ -21,6 +21,13 @@ export class CursoService {
 
   //Obter todos os cursos
   
+    /*
+    Error: src/app/curso/curso.service.ts:25:22 - error TS7053: Element implicitly has an 'any' type because expression of type '"cursos"' can't be used to index type 'Object'.
+  Property 'cursos' does not exist on type 'Object'.
+
+    34         this.vetor = res["cursos"];
+                        ~~~~~~~~~~~~~
+    */
 
   obterCursos():Observable<Curso[]>{
     return this.http.get(this.url+"listar").pipe(
